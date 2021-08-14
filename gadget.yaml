@@ -1,0 +1,21 @@
+evice-tree: sun8i-h2-plus-orangepi-r1.dtb
+device-tree-origin: kernel
+volumes:
+  orangepi-r1:
+    bootloader: u-boot
+    schema: mbr
+    structure:
+      - name: u-boot
+        type: bare
+        size: 10485760
+        offset: 8192
+        content:
+          - image: u-boot-sunxi-with-spl.bin
+      - name: system-boot
+        type: 0C
+        filesystem: vfat
+        filesystem-label: system-boot
+        size: 128M
+        content:
+          - source: initrd-extra.img
+            target: initrd-extra.img

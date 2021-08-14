@@ -4,6 +4,7 @@ summary: Orange Pi R1
 description: |
  Bootloader files and partitoning data to create a
  bootable Ubuntu Core image for the Orange Pi R1.
+base: core18
 type: gadget
 
 architectures:
@@ -17,9 +18,10 @@ parts:
   uboot:
     plugin: nil
     source: git://git.denx.de/u-boot.git
-    source-branch: v2018.05
+    source-branch: v2021.07
     override-build: |
-      git apply ../../../uboot.patch
+      echo `pwd`
+      #git apply ../../../project/uboot.patch
       TCHAINVER="$(wget -q -O - \
                  https://releases.linaro.org/components/toolchain/binaries/latest-7/arm-linux-gnueabihf/| \
                  html2text -width 200|grep 'x86_64_arm-linux-gnueabihf.tar.xz '|cut -d' ' -f2)"

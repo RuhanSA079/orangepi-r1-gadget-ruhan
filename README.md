@@ -5,4 +5,5 @@ This repo is an experimental repo for the Orange Pi R1, used much of Ogra1's Ora
 https://github.com/ogra1/orangepi-zero-gadget
 
 This is just an experimental project, to see if I can get Ubuntu Core running on the unit.
-I am using the 2015.05 branch of U-Boot, may update to latest version, if this works.
+I am using the 2021.xx branch of u-boot, the patch maybe does not apply anymore.
+

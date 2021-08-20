@@ -1,4 +1,4 @@
-evice-tree: sun8i-h2-plus-orangepi-r1.dtb
+device-tree: sun8i-h2-plus-orangepi-r1.dtb
 device-tree-origin: kernel
 volumes:
   orangepi-r1:
